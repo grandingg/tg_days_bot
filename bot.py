@@ -1,9 +1,10 @@
+import os
 import json
 from datetime import date
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
-BOT_TOKEN = "8670014250:AAHMiZbYS3r9w02RSMyGAvNvCnByxLjNck4"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 EVENTS_FILE = "events.json"
 
 
