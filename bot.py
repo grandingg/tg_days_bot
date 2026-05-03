@@ -7,6 +7,10 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 EVENTS_FILE = "events.json"
 
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN не найден в Render Environment Variables")
+
+print("Бот запускается...")
 
 def load_events():
     try:
